@@ -1,0 +1,10 @@
+[
+    {
+        "merged": "C:\\Users\\ramkr\\Documents\\AndroidProjects\\StackUp\\app\\build\\intermediates\\res\\merged\\debug\\mipmap-mdpi-v4\\ic_launcher.png",
+        "source": "C:\\Users\\ramkr\\Documents\\AndroidProjects\\StackUp\\app\\src\\main\\res\\mipmap-mdpi\\ic_launcher.png"
+    },
+    {
+        "merged": "C:\\Users\\ramkr\\Documents\\AndroidProjects\\StackUp\\app\\build\\intermediates\\res\\merged\\debug\\mipmap-mdpi-v4\\stackoverflow_app_icon.png",
+        "source": "C:\\Users\\ramkr\\Documents\\AndroidProjects\\StackUp\\app\\src\\main\\res\\mipmap-mdpi\\stackoverflow_app_icon.png"
+    }
+]
