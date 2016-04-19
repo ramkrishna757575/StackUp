@@ -1,5 +1,7 @@
 package com.ramkrishna.android.stackup.stackup;
 
+import android.graphics.Bitmap;
+
 /**
  * Created by ramkr on 17-Apr-16.
  *
@@ -14,6 +16,7 @@ public class Owner {
     String profile_image;
     String display_name;
     String link;
+    Bitmap display_image;
 
     Owner(int reputation, int user_id, String user_type, int accept_rate, String profile_image, String display_name, String link)
     {
@@ -24,5 +27,16 @@ public class Owner {
         this.profile_image = profile_image;
         this.display_name = display_name;
         this.link = link;
+    }
+
+
+    public Bitmap getDisplay_image()
+    {
+        return display_image;
+    }
+
+    public void setDisplay_image(Bitmap display_image)
+    {
+        this.display_image = display_image;
     }
 }

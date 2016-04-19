@@ -1,5 +1,8 @@
 package com.ramkrishna.android.stackup.stackup;
 
+import android.graphics.Bitmap;
+
+import java.util.Comparator;
 import java.util.List;
 
 /**
@@ -22,6 +25,7 @@ public class Item {
     String link;
     String title;
 
+
     Item(List<String> tags, Owner owner, int view_count, int answer_count, int score, int last_activity_date, int creation_date, int last_edit_date, int question_id, String link, String title)
     {
         this.tags = tags;
@@ -37,4 +41,27 @@ public class Item {
         this.link = link;
         this.title = title;
     }
+
+    static Comparator<Item> sortByVotes()
+    {
+        return new Comparator<Item>() {
+            @Override
+            public int compare(Item lhs, Item rhs)
+            {
+                return rhs.score - lhs.score;
+            }
+        };
+    }
+
+    static Comparator<Item> sortByCreationDate()
+    {
+        return new Comparator<Item>() {
+            @Override
+            public int compare(Item lhs, Item rhs)
+            {
+                return rhs.creation_date - lhs.creation_date;
+            }
+        };
+    }
+
 }

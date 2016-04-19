@@ -1,4 +1,5 @@
 <resources>
     <string name="app_name">StackUp</string>
     <string name="search_query_hint">Search (by Tag)</string>
+    <string name="title_activity_main">MainActivity</string>
 </resources>

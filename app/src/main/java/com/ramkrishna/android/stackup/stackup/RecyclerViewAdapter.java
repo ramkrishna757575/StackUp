@@ -19,7 +19,7 @@ import java.util.List;
  *
  * Adapter for the recycler view. Manages the Updation of UI as per data changes.
  */
-public class RecyclerViewAdapter extends RecyclerView.Adapter<View_Holder> {
+public class RecyclerViewAdapter extends RecyclerView.Adapter<ViewHolder> {
 
     List<Item> list = Collections.emptyList();
     Context context;
@@ -32,17 +32,17 @@ public class RecyclerViewAdapter extends RecyclerView.Adapter<View_Holder> {
     }
 
     @Override
-    public View_Holder onCreateViewHolder(ViewGroup parent, int viewType)
+    public ViewHolder onCreateViewHolder(ViewGroup parent, int viewType)
     {
         //Inflate the layout, initialize the View Holder
         View v = LayoutInflater.from(parent.getContext()).inflate(R.layout.recycler_view_item, parent, false);
-        View_Holder holder = new View_Holder(v);
+        ViewHolder holder = new ViewHolder(v);
         return holder;
 
     }
 
     @Override
-    public void onBindViewHolder(View_Holder holder, final int position)
+    public void onBindViewHolder(ViewHolder holder, final int position)
     {
 
         //Use the provided View Holder on the onCreateViewHolder method to populate the current row on the RecyclerView
@@ -67,8 +67,13 @@ public class RecyclerViewAdapter extends RecyclerView.Adapter<View_Holder> {
                 context.startActivity(i);
             }
         });
-        GetProfilePic gpc = new GetProfilePic(list.get(position).owner.profile_image,holder);
-        gpc.execute();
+        if(list.get(position).owner.getDisplay_image()== null)
+        {
+            GetProfilePic gpc = new GetProfilePic(holder,position);
+            gpc.execute();
+        }else{
+            holder.profile_image.setImageBitmap(list.get(position).owner.getDisplay_image());
+        }
     }
 
     @Override
@@ -104,12 +109,13 @@ public class RecyclerViewAdapter extends RecyclerView.Adapter<View_Holder> {
     private class GetProfilePic extends AsyncTask {
         NetworkDataManager ndm = new NetworkDataManager(context);
         String url;
-        View_Holder holder;
-        Bitmap display_image;
-
-        GetProfilePic(String url,View_Holder holder)
+        int position;
+        ViewHolder holder;
+        Bitmap displayImage;
+        GetProfilePic(ViewHolder holder,int position)
         {
-            this.url = url;
+            this.position = position;
+            this.url = list.get(position).owner.profile_image;
             this.holder = holder;
         }
 
@@ -132,9 +138,12 @@ public class RecyclerViewAdapter extends RecyclerView.Adapter<View_Holder> {
         protected void onPostExecute(Object o)
         {
             super.onPostExecute(o);
-            display_image = ndm.getBitmap();
-            if (display_image != null)
-                holder.profile_image.setImageBitmap(display_image);
+            displayImage = ndm.getBitmap();
+            if(displayImage != null)
+            {
+                list.get(position).owner.setDisplay_image(displayImage);
+                holder.profile_image.setImageBitmap(displayImage);
+            }
         }
     }
 }
