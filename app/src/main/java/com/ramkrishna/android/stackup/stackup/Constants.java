@@ -8,7 +8,7 @@ package com.ramkrishna.android.stackup.stackup;
 public final class Constants {
 
     //API Link
-    public static final String API_URL = "http://api.stackexchange.com/2.2/questions/unanswered?order=desc&sort=activity&site=stackoverflow&tagged=";
+    public static final String API_URL = "http://api.stackexchange.com/2.2/questions/unanswered?site=stackoverflow&tagged=";
 
     // JSON Node names
     public static final String TAG_QUOTA_MAX = "quota_max";

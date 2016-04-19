@@ -20,7 +20,15 @@
         "source": "C:\\Users\\ramkr\\Documents\\AndroidProjects\\StackUp\\app\\build\\generated\\res\\pngs\\debug\\drawable-ldpi\\ic_account_box_black_24dp.png"
     },
     {
+        "merged": "C:\\Users\\ramkr\\Documents\\AndroidProjects\\StackUp\\app\\build\\intermediates\\res\\merged\\debug\\drawable-ldpi-v4\\ic_autorenew_black_24dp.png",
+        "source": "C:\\Users\\ramkr\\Documents\\AndroidProjects\\StackUp\\app\\build\\generated\\res\\pngs\\debug\\drawable-ldpi\\ic_autorenew_black_24dp.png"
+    },
+    {
         "merged": "C:\\Users\\ramkr\\Documents\\AndroidProjects\\StackUp\\app\\build\\intermediates\\res\\merged\\debug\\drawable-ldpi-v4\\ic_home_black_24dp.png",
         "source": "C:\\Users\\ramkr\\Documents\\AndroidProjects\\StackUp\\app\\build\\generated\\res\\pngs\\debug\\drawable-ldpi\\ic_home_black_24dp.png"
+    },
+    {
+        "merged": "C:\\Users\\ramkr\\Documents\\AndroidProjects\\StackUp\\app\\build\\intermediates\\res\\merged\\debug\\drawable-ldpi-v4\\ic_sort_black_24dp.png",
+        "source": "C:\\Users\\ramkr\\Documents\\AndroidProjects\\StackUp\\app\\build\\generated\\res\\pngs\\debug\\drawable-ldpi\\ic_sort_black_24dp.png"
     }
 ]

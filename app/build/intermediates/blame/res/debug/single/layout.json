@@ -88,12 +88,12 @@
         "source": "C:\\Users\\ramkr\\Documents\\AndroidProjects\\StackUp\\app\\build\\intermediates\\exploded-aar\\com.android.support\\design\\23.3.0\\res\\layout\\design_navigation_menu.xml"
     },
     {
-        "merged": "C:\\Users\\ramkr\\Documents\\AndroidProjects\\StackUp\\app\\build\\intermediates\\res\\merged\\debug\\layout\\abc_action_bar_up_container.xml",
-        "source": "C:\\Users\\ramkr\\Documents\\AndroidProjects\\StackUp\\app\\build\\intermediates\\exploded-aar\\com.android.support\\appcompat-v7\\23.3.0\\res\\layout\\abc_action_bar_up_container.xml"
-    },
-    {
         "merged": "C:\\Users\\ramkr\\Documents\\AndroidProjects\\StackUp\\app\\build\\intermediates\\res\\merged\\debug\\layout\\abc_screen_toolbar.xml",
         "source": "C:\\Users\\ramkr\\Documents\\AndroidProjects\\StackUp\\app\\build\\intermediates\\exploded-aar\\com.android.support\\appcompat-v7\\23.3.0\\res\\layout\\abc_screen_toolbar.xml"
+    },
+    {
+        "merged": "C:\\Users\\ramkr\\Documents\\AndroidProjects\\StackUp\\app\\build\\intermediates\\res\\merged\\debug\\layout\\abc_action_bar_up_container.xml",
+        "source": "C:\\Users\\ramkr\\Documents\\AndroidProjects\\StackUp\\app\\build\\intermediates\\exploded-aar\\com.android.support\\appcompat-v7\\23.3.0\\res\\layout\\abc_action_bar_up_container.xml"
     },
     {
         "merged": "C:\\Users\\ramkr\\Documents\\AndroidProjects\\StackUp\\app\\build\\intermediates\\res\\merged\\debug\\layout\\abc_select_dialog_material.xml",

@@ -1,7 +1,5 @@
 package com.ramkrishna.android.stackup.stackup;
 
-import android.graphics.Bitmap;
-
 import java.util.Comparator;
 import java.util.List;
 
@@ -10,7 +8,7 @@ import java.util.List;
  *
  * Creates individual "Item" Object that contains data retrieved and Parsed from the API.
  */
-public class Item {
+public class Item implements  Comparable<Item>{
 
     /*The below variables hold the various components of each item received from the API*/
     List<String> tags;
@@ -59,9 +57,14 @@ public class Item {
             @Override
             public int compare(Item lhs, Item rhs)
             {
-                return rhs.creation_date - lhs.creation_date;
+                return lhs.creation_date - rhs.creation_date;
             }
         };
     }
 
+    @Override
+    public int compareTo(Item another)
+    {
+        return (this.title).compareTo(another.title);
+    }
 }

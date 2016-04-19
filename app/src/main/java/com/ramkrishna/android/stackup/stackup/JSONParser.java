@@ -56,14 +56,10 @@ public class JSONParser {
                 Owner owner;
                 int view_count = 0, answer_count = 0, score = 0, last_activity_date = 0, creation_date = 0, last_edit_date = 0, question_id = 0;
                 String link = null, title = null;
-                int reputation = 0, user_id = -1, accept_rate = 0;
+                int reputation = 0, user_id = 0, accept_rate = 0;
                 String user_type = null, profile_image = null, display_name = null, owner_link = null;
 
                 JSONObject itemsObj = items.getJSONObject(i);
-                if (itemsObj.getBoolean(Constants.TAG_IS_ANSWERED) || itemsObj.getInt(Constants.TAG_ANSWER_COUNT) > 0)
-                {
-                    continue;
-                }
                 JSONArray tags = itemsObj.getJSONArray(Constants.TAG_TAGS);
                 for (int j = 0; j < tags.length(); j++)
                 {

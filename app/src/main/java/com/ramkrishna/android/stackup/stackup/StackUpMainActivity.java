@@ -97,7 +97,7 @@ public class StackUpMainActivity extends AppCompatActivity {
             super.onPreExecute();
             ndm.setUrl(url);
             ndm.initNetwork();
-            progressDialog = ProgressDialog.show(StackUpMainActivity.this, "Loading List", "Please wait...");
+            progressDialog = ProgressDialog.show(StackUpMainActivity.this, "Loading Questions List", "Please wait...");
         }
 
         @Override
