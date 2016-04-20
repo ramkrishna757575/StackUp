@@ -4,7 +4,7 @@ This is an Android Studio Project. This is an App that shows questions that are 
 
 To setup project in your in local system:
 
-1) Download and install latest version of Android Studio (This project is created in Android Studio version 2)<br/>.<br/>
+1) Download and install latest version of Android Studio (This project is created in Android Studio version 2).<br/>
 2) Clone this repository to local system.<br/>
 3) Open Android Studio and select File > New > Import Project.<br/>
 4) Select the cloned folder.<br/>
