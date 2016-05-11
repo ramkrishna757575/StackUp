@@ -11,6 +11,7 @@ import android.widget.SearchView;
 import android.widget.TextView;
 
 import java.util.ArrayList;
+import java.util.Collections;
 import java.util.List;
 
 /**
@@ -38,7 +39,6 @@ public class StackUpMainActivity extends AppCompatActivity {
             @Override
             public void onFocusChange(View v, boolean hasFocus)
             {
-                // TODO Auto-generated method stub
                 //Toast.makeText(getBaseContext(), String.valueOf(hasFocus), Toast.LENGTH_SHORT).show();
             }
         });
@@ -49,7 +49,6 @@ public class StackUpMainActivity extends AppCompatActivity {
             @Override
             public boolean onQueryTextSubmit(String query)
             {
-                // TODO Auto-generated method stub
                 //Toast.makeText(getBaseContext(), query, Toast.LENGTH_SHORT).show();
                 url = Constants.API_URL;
                 if (!query.isEmpty())
@@ -70,7 +69,6 @@ public class StackUpMainActivity extends AppCompatActivity {
             @Override
             public boolean onQueryTextChange(String newText)
             {
-                // TODO Auto-generated method stub
                 //	Toast.makeText(getBaseContext(), newText,Toast.LENGTH_SHORT).show();
                 return false;
             }
@@ -115,6 +113,8 @@ public class StackUpMainActivity extends AppCompatActivity {
             JSONParser jsp = new JSONParser(rawData);
             jsp.parseObject();
             itemsInList = jsp.getItemList();
+            //TODO Add sorting feature
+            Collections.sort(itemsInList,Item.sortByVotes());
             RecyclerView recyclerView = (RecyclerView) findViewById(R.id.list_recycler_view);
             RecyclerViewAdapter adapter = new RecyclerViewAdapter(itemsInList, getApplication());
             recyclerView.setAdapter(adapter);

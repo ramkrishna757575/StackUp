@@ -1,50 +1,32 @@
 <?xml version="1.0" encoding="utf-8"?>
 <instant-run
-    abi="x86"
-    api-level="23"
-    density="xxhdpi"
+    abi="x86,armeabi-v7a,armeabi"
+    api-level="21"
+    density="xhdpi"
     format="7"
-    timestamp="101345052477679"
-    verifier="FIELD_TYPE_CHANGE" >
+    timestamp="56112873912333" >
 
     <task
         name="javac"
-        duration="263" />
+        duration="445" />
     <task
         name="instant-run-dex"
         duration="0" />
     <task
         name="instant-run-transform"
-        duration="24" />
+        duration="234" />
     <task
         name="verifier"
-        duration="5" />
+        duration="115" />
 
     <artifact
-        location="C:\Users\ramkr\Documents\AndroidProjects\StackUp\app\build\intermediates\transforms\dex\debug\folders\1000\5\slice_2\classes.dex"
-        type="DEX" />
+        location="C:\Users\ramkr\Documents\AndroidProjects\StackUp\app\build\outputs\apk\app-debug.apk"
+        type="MAIN" />
 
-    <build timestamp="100095525236310" >
+    <build timestamp="56112873912333" >
         <artifact
             location="C:\Users\ramkr\Documents\AndroidProjects\StackUp\app\build\outputs\apk\app-debug.apk"
             type="MAIN" />
-    </build>
-    <build
-        timestamp="100920547855501"
-        verifier="R_CLASS_CHANGE" >
-        <artifact
-            location="C:\Users\ramkr\Documents\AndroidProjects\StackUp\app\build\intermediates\res\resources-debug.ap_"
-            type="RESOURCES" />
-        <artifact
-            location="C:\Users\ramkr\Documents\AndroidProjects\StackUp\app\build\intermediates\transforms\dex\debug\folders\1000\5\slice_0\classes.dex"
-            type="DEX" />
-    </build>
-    <build
-        timestamp="101345052477679"
-        verifier="FIELD_TYPE_CHANGE" >
-        <artifact
-            location="C:\Users\ramkr\Documents\AndroidProjects\StackUp\app\build\intermediates\transforms\dex\debug\folders\1000\5\slice_2\classes.dex"
-            type="DEX" />
     </build>
 
 </instant-run>

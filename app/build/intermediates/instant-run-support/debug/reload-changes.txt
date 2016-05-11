@@ -1,4 +1,0 @@
-CHANGED,C:\Users\ramkr\Documents\AndroidProjects\StackUp\app\build\intermediates\transforms\instantRun\debug\folders\4000\5\enhanced\com\android\tools\fd\runtime\AppPatchesLoaderImpl.class
-CHANGED,C:\Users\ramkr\Documents\AndroidProjects\StackUp\app\build\intermediates\transforms\instantRun\debug\folders\4000\5\enhanced\com\ramkrishna\android\stackup\stackup\Constants$override.class
-CHANGED,C:\Users\ramkr\Documents\AndroidProjects\StackUp\app\build\intermediates\transforms\instantRun\debug\folders\4000\5\enhanced\com\ramkrishna\android\stackup\stackup\StackUpMainActivity$2$override.class
-CHANGED,C:\Users\ramkr\Documents\AndroidProjects\StackUp\app\build\intermediates\transforms\instantRun\debug\folders\4000\5\enhanced\com\ramkrishna\android\stackup\stackup\StackUpMainActivity$override.class

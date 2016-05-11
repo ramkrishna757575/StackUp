@@ -10,6 +10,8 @@ import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
 
+import com.squareup.picasso.Picasso;
+
 import java.sql.Timestamp;
 import java.util.Collections;
 import java.util.List;
@@ -55,7 +57,7 @@ public class RecyclerViewAdapter extends RecyclerView.Adapter<ViewHolder> {
         holder.tags.setText(tags);
         holder.display_name.setText("By - " + list.get(position).owner.display_name);
         holder.votes.setText(Integer.toString(list.get(position).score));
-        Timestamp lastActiveDate = new Timestamp(list.get(position).last_activity_date);
+        Timestamp lastActiveDate = new Timestamp(list.get(position).last_activity_date * 1000L);
         holder.timestamp.setText(lastActiveDate.toString());
         holder.cv.setOnClickListener(new View.OnClickListener() {
             @Override
@@ -67,13 +69,7 @@ public class RecyclerViewAdapter extends RecyclerView.Adapter<ViewHolder> {
                 context.startActivity(i);
             }
         });
-        if(list.get(position).owner.getDisplay_image()== null)
-        {
-            GetProfilePic gpc = new GetProfilePic(holder,position);
-            gpc.execute();
-        }else{
-            holder.profile_image.setImageBitmap(list.get(position).owner.getDisplay_image());
-        }
+        Picasso.with(context).load(list.get(position).owner.profile_image).into(holder.profile_image);
     }
 
     @Override
@@ -103,47 +99,5 @@ public class RecyclerViewAdapter extends RecyclerView.Adapter<ViewHolder> {
         int position = list.indexOf(data);
         list.remove(position);
         notifyItemRemoved(position);
-    }
-
-    //Inner class to handle Image download for each Owner
-    private class GetProfilePic extends AsyncTask {
-        NetworkDataManager ndm = new NetworkDataManager(context);
-        String url;
-        int position;
-        ViewHolder holder;
-        Bitmap displayImage;
-        GetProfilePic(ViewHolder holder,int position)
-        {
-            this.position = position;
-            this.url = list.get(position).owner.profile_image;
-            this.holder = holder;
-        }
-
-        @Override
-        protected void onPreExecute()
-        {
-            super.onPreExecute();
-            ndm.setUrl(url);
-            ndm.initNetwork();
-        }
-
-        @Override
-        protected Object doInBackground(Object[] params)
-        {
-            ndm.fetchBitmapData();
-            return null;
-        }
-
-        @Override
-        protected void onPostExecute(Object o)
-        {
-            super.onPostExecute(o);
-            displayImage = ndm.getBitmap();
-            if(displayImage != null)
-            {
-                list.get(position).owner.setDisplay_image(displayImage);
-                holder.profile_image.setImageBitmap(displayImage);
-            }
-        }
     }
 }
